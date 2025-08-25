@@ -1,0 +1,32 @@
+[
+    {
+       "username" : "Admin",
+       "password" : "admin123",
+       "expected" : "Dashboard"
+    },
+    {
+        "username1" : "Admin123",
+        "password1" : "admin123",
+        "expected"  : "alert popup"
+    },
+    {
+        "username2" : "Admin",
+        "password2" : "admin",
+        "expected"  : "alert popup"
+    },
+    {
+        "username3" : "Admin123",
+        "password3" : "admin",
+        "expected"  : "alert popup"
+    },
+    {
+        "username4" : "Admin",
+        "password4" : "",
+        "expected"  : "alert popup"
+    },
+     {
+        "username5" : "",
+        "password5" : "admin123",
+        "expected"  : "alert popup"
+    }
+]
