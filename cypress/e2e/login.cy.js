@@ -1,16 +1,21 @@
 import login from "../pageobject/login-test";
 
+
+
 describe('', () => {
 
     it('username valid & password valid', () => {
         cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+        
         cy.fixture("login").then((data)=>{
 
             //panggil varible class
             const ln =new login()
             ln.InputUsername("Admin")
-            ln.InputPassword("admin123")
+            ln.InputPassword("admi123")
+            cy.intercept('GET', 'https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/dashboard/employees/action-summary').as('Dashboard')
             ln.submit()
+            cy.wait('@Dashboard')
         })
 
     });
